@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -43,14 +44,16 @@ public class loginActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton)findViewById(R.id.login_button);
 
-        loginButton.setReadPermissions(Arrays.asList("email", "user_status"));
+        loginButton.setReadPermissions("email", "user_status", "public_profile");
         loginButton.registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         // App code
                        // userId = loginResult.getAccessToken().getUserId();
-                        handleFacebookAccessToken(loginResult.getAccessToken());                    }
+                        Log.v("LOGIN","FB_SUCCESSFULL");
+                        handleFacebookAccessToken(loginResult.getAccessToken());
+                    }
 
                     @Override
                     public void onCancel() {
@@ -71,31 +74,35 @@ public class loginActivity extends AppCompatActivity {
                 public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     if(user != null){
-                        goToMain();
+                        Log.v("LOGIN","SUCCESSFULL");
+                        Intent intent = new Intent(loginActivity.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                        //intent.putExtra("fbUserId", userId);
+                        startActivity(intent);
                     }
                 }
             };
     }
 
-
-
     private void handleFacebookAccessToken(AccessToken accessToken){
+        Log.v("LOGIN","TASK_SUCCESSFULL0");
+        Intent intent = new Intent(loginActivity.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        //intent.putExtra("fbUserId", userId);
+        startActivity(intent);
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
+        Log.v("LOGIN","TASK_SUCCESSFULL1");
+
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener( this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                Log.v("LOGIN","TASK_SUCCESSFULL");
+
                 if(!task.isSuccessful()){
                     Toast.makeText(getApplication(), "firebase_error_login.", Toast.LENGTH_LONG).show();
                 }
             }
         });
-    }
-
-    private void goToMain(){
-        Intent intent = new Intent(loginActivity.this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra("fbUserId", userId);
-        startActivity(intent);
     }
 
     @Override
