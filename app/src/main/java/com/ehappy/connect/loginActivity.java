@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+import android.support.v4.app.FragmentManager;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -43,14 +44,12 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton)findViewById(R.id.login_button);
-
         loginButton.setReadPermissions("email", "user_status", "public_profile");
         loginButton.registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         // App code
-                       // userId = loginResult.getAccessToken().getUserId();
                         Log.v("LOGIN","FB_SUCCESSFULL");
                         handleFacebookAccessToken(loginResult.getAccessToken());
                     }
@@ -75,21 +74,14 @@ public class loginActivity extends AppCompatActivity {
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     if(user != null){
                         Log.v("LOGIN","SUCCESSFULL");
-                        Intent intent = new Intent(loginActivity.this, MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                        //intent.putExtra("fbUserId", userId);
-                        startActivity(intent);
+                        FragmentManager fm = getSupportFragmentManager();
+                        fm.beginTransaction().replace(R.id.frame, new MainActivity()).commit();
                     }
                 }
             };
     }
 
     private void handleFacebookAccessToken(AccessToken accessToken){
-        Log.v("LOGIN","TASK_SUCCESSFULL0");
-        Intent intent = new Intent(loginActivity.this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        //intent.putExtra("fbUserId", userId);
-        startActivity(intent);
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
         Log.v("LOGIN","TASK_SUCCESSFULL1");
 

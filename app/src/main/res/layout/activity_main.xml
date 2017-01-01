@@ -10,10 +10,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ehappy.connect.MainActivity">
 
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:id="@+id/t1"
+        android:layout_below="@+id/t2"
+        android:layout_toStartOf="@+id/button2"
+        android:layout_marginEnd="39dp"
+        android:layout_marginTop="110dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t2"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/t1"
+        android:layout_marginTop="69dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:id="@+id/t3"
+        android:layout_above="@+id/t1"
+        android:layout_alignStart="@+id/t1" />
 
 
 </RelativeLayout>
