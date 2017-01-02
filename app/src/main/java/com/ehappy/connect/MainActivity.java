@@ -1,38 +1,35 @@
 package com.ehappy.connect;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import android.support.v4.app.Fragment;
 
-public class MainActivity extends Fragment {
+
+public class MainActivity extends AppCompatActivity {
 
     private TextView t1;
     private TextView t2;
     private TextView t3;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View v = inflater.inflate(R.layout.activity_main, container, false);
-        return v;
-    }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        t1 = (TextView) this.getView().findViewById(R.id.t1);
-        t2 = (TextView) this.getView().findViewById(R.id.t2);
-        t3 = (TextView) this.getView().findViewById(R.id.t3);
+        t1 = (TextView) findViewById(R.id.t1);
+        t2 = (TextView) findViewById(R.id.t2);
+        t3 = (TextView) findViewById(R.id.t3);
 
-        FirebaseUser user  = FirebaseAuth.getInstance().getCurrentUser();
-        if(user != null){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
             String name = user.getDisplayName();
             String email = user.getEmail();
             Uri photoUri = user.getPhotoUrl();
@@ -43,4 +40,13 @@ public class MainActivity extends Fragment {
             t3.setText(uid);
         }
     }
+
+    public void logout(View view){
+        FirebaseAuth.getInstance().signOut();
+        LoginManager.getInstance().logOut();
+        Intent intent = new Intent(MainActivity.this, loginActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
+
