@@ -12,6 +12,8 @@ import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static com.ehappy.connect.R.id.connect;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, loginActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void connect(View view){
+        Intent intent = new Intent(MainActivity.this, Connect.class);
+        startActivity(intent);
     }
 }
 
