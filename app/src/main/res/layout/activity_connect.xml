@@ -38,4 +38,31 @@
         android:layout_above="@+id/quit"
         android:layout_alignStart="@+id/quit"
         android:onClick="startFind" />
+
+    <TextView
+        android:text=" "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_alignEnd="@+id/result"
+        android:layout_marginTop="48dp"
+        android:id="@+id/tl" />
+
+    <TextView
+        android:text=" "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:id="@+id/dddname" />
+
+    <TextView
+        android:text=" "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dddname"
+        android:layout_alignEnd="@+id/dddname"
+        android:layout_marginTop="37dp"
+        android:id="@+id/ddm" />
 </RelativeLayout>

@@ -42,15 +42,11 @@ public class MainActivity extends AppCompatActivity {
         if (user != null) {
             String name = user.getDisplayName();
             String email = user.getEmail();
-            Uri photoUri = user.getPhotoUrl();
             String uid = user.getUid();
 
             t1.setText(name);
             t2.setText(email);
             //t3.setText(uid);
-
-            User u = new User(name, "0", email);
-            mDatabase.child("member").child(uid).setValue(u);
         }
     }
 
@@ -79,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     public void connect(View view){
         Intent intent = new Intent(MainActivity.this, Connect.class);
         intent.putExtra("result",result);
-        startActivity(intent);
+        startActivityForResult(intent,requestCode);
     }
 
     public void test(View view){

@@ -14,339 +14,379 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"><LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-
-
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
+            android:text="Connector Questions"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:id="@+id/action"
+            android:textSize="30dp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
 
-            <TextView
-                android:text="Connector Questions"
+        <TextView
+            android:text="1.	我希望從何處得到力量?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q1"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="別人"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/action"
-                android:textSize="30dp"
-                android:textColor="@android:color/black"
-                android:gravity="center" />
-
-            <TextView
-                android:text="1.	我希望從何處得到力量?"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/q1"
+                android:id="@+id/a1_1"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:text="別人"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a1_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="我自己"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a1_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-            </RadioGroup>
-
-            <TextView
-                android:text="2.	當我參加一個社交聚會時，我通常會"
+            <RadioButton
+                android:text="我自己"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q2"
+                android:id="@+id/a1_2"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        </RadioGroup>
 
-                <RadioButton
-                    android:text="在夜色很深時，也許就是最晚離開的那一個"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a2_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
 
-                <RadioButton
-                    android:text="在夜晚開始的時候，就疲倦了並且想回家"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a2_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
+        <TextView
+            android:text="2.	當我參加一個社交聚會時，我通常會"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q2"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
 
-            </RadioGroup>
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-            <TextView
-                android:text="3.	下列哪一種聽起來比較吸引人?"
+            <RadioButton
+                android:text="在夜色很深時，也許就是最晚離開的那一個"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q3"
+                android:id="@+id/a2_1"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:text="與我的情人去社交活動頻繁的地方"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a3_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="待在家中與我的情人做一些特別的事情"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a3_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
-
-            <TextView
-                android:text="4.	在約會中，我通常"
+            <RadioButton
+                android:text="在夜晚開始的時候，就疲倦了並且想回家"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q4"
+                android:id="@+id/a2_2"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        </RadioGroup>
 
-                <RadioButton
-                    android:text="整體來說蠻健談的"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a4_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
 
-                <RadioButton
-                    android:text="較安靜並保留"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a4_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
+        <TextView
+            android:text="3.	下列哪一種聽起來比較吸引人?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q3"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
 
-            <TextView
-                android:text="5.	過去，我希望我的情人"
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="與我的情人去社交活動頻繁的地方"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q5"
+                android:id="@+id/a3_1"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:text="在外面不要有太多親密的動作"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a5_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="不受旁人眼光，盡情恩愛"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a5_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
-
-            <TextView
-                android:text="6.	如果今天要報告Android專題，你會"
+            <RadioButton
+                android:text="待在家中與我的情人做一些特別的事情"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q6"
+                android:id="@+id/a3_2"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
+        </RadioGroup>
 
-            <RadioGroup
-                android:id="@+id/radioGroup6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
 
-                <RadioButton
-                    android:text="做好萬全準備"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a6_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
+        <TextView
+            android:text="4.	在約會中，我通常"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q4"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
 
-                <RadioButton
-                    android:text="乞求老師讓我過好年"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a6_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-            <TextView
-                android:text="7.	當你在教室準備期末考時，有情侶在附近放閃，你心裡會"
+            <RadioButton
+                android:text="整體來說蠻健談的"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q7"
+                android:id="@+id/a4_1"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:text="假裝沒看到，繼續念書"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a7_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="事不關己，因為自己也有另一半"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a7_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
-
-            <TextView
-                android:text="8.	你是否會後悔製作這個專題"
+            <RadioButton
+                android:text="較安靜並保留"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q8"
+                android:id="@+id/a4_2"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
+        </RadioGroup>
 
-            <RadioGroup
-                android:id="@+id/radioGroup8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
 
-                <RadioButton
-                    android:text="會，我應該能更好"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a8_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
+        <TextView
+            android:text="5.	過去，我希望我的情人"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q5"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
 
-                <RadioButton
-                    android:text="不會，我很滿意"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a8_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
+        <RadioGroup
+            android:id="@+id/radioGroup5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-            <TextView
-                android:text="9.	當我正處於曖昧階段時"
+            <RadioButton
+                android:text="在外面不要有太多親密的動作"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q9"
+                android:id="@+id/a5_1"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:text="我會主動出擊"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a9_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="等待對方有進一步的行動"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a9_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
-
-            <TextView
-                android:text="10. 我把大部分和別人的相遇視為"
+            <RadioButton
+                android:text="不受旁人眼光，盡情恩愛"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q10"
+                android:id="@+id/a5_2"
                 android:textSize="24dp"
-                android:textColor="@android:color/black" />
+                android:layout_weight="1" />
+        </RadioGroup>
 
-            <RadioGroup
-                android:id="@+id/radioGroup10"
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <TextView
+            android:text="6.	如果今天要報告Android專題，你會"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q6"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="做好萬全準備"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:text="友善及重要的"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a10_1"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:text="另有目的"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/a10_2"
-                    android:textSize="24dp"
-                    android:layout_weight="1" />
-            </RadioGroup>
-
-            <Button
-                android:text="NEXT"
                 android:layout_height="wrap_content"
-                android:id="@+id/next"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:elevation="0dp"
-                android:background="@android:color/holo_red_dark"
-                android:textSize="24sp"
-                android:textColor="@android:color/holo_orange_light"
-                android:layout_gravity="right|center_vertical"/>
+                android:id="@+id/a6_1"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="乞求老師讓我過好年"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a6_2"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <TextView
+            android:text="7.	當你在教室準備期末考時，有情侶在附近放閃，你心裡會"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q7"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="假裝沒看到，繼續念書"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a7_1"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="事不關己，因為自己也有另一半"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a7_2"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <TextView
+            android:text="8.	你是否會後悔製作這個專題"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q8"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="會，我應該能更好"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a8_1"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="不會，我很滿意"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a8_2"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <TextView
+            android:text="9.	當我正處於曖昧階段時"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q9"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="我會主動出擊"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a9_1"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="等待對方有進一步的行動"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a9_2"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <TextView
+            android:text="10. 我把大部分和別人的相遇視為"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/q10"
+            android:textSize="24dp"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="友善及重要的"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a10_1"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="另有目的"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/a10_2"
+                android:textSize="24dp"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <Button
+            android:text="NEXT"
+            android:layout_height="wrap_content"
+            android:id="@+id/next"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:elevation="0dp"
+            android:background="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_gravity="right|center_vertical"/>
 
         </LinearLayout>
-
     </ScrollView>
 </RelativeLayout>
