@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import static com.ehappy.connect.R.id.connect;
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         t2 = (TextView) findViewById(R.id.t2);
         t3 = (TextView) findViewById(R.id.t3);
         t3.setText(result);
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             t1.setText(name);
             t2.setText(email);
             //t3.setText(uid);
+
+            User u = new User(name, "0", email);
+            mDatabase.child("member").child(uid).setValue(u);
         }
     }
 
