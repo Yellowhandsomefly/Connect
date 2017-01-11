@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 
 import static com.ehappy.connect.R.id.connect;
 
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView t1;
     private TextView t2;
     private TextView t3;
+    String result = "還未做測驗，請先做測驗";
     int requestCode  = 8888;
+    private DatabaseReference mDatabase;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         t1 = (TextView) findViewById(R.id.t1);
         t2 = (TextView) findViewById(R.id.t2);
         t3 = (TextView) findViewById(R.id.t3);
-        t3.setText("還未做測驗，請先做測驗");
+        t3.setText(result);
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch(resultCode){//resultCode是剛剛妳A切換到B時設的resultCode
             case 8888 ://當B傳回來的Intent的requestCode 等於當初A傳出去的話
-                String result = data.getExtras().getString("score");
+                result = data.getExtras().getString("score");
                 t3.setText("測驗結果：" + result);
                 break;
 
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void connect(View view){
         Intent intent = new Intent(MainActivity.this, Connect.class);
+        intent.putExtra("result",result);
         startActivity(intent);
     }
 

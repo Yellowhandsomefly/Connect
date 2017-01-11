@@ -33,7 +33,7 @@
                 android:gravity="center" />
 
             <TextView
-                android:text="1.	我傾向從何處得到力量"
+                android:text="1.	我希望從何處得到力量?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q1"
@@ -54,7 +54,7 @@
                     android:layout_weight="1" />
 
                 <RadioButton
-                    android:text="我自己的想法"
+                    android:text="我自己"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a1_2"
@@ -64,7 +64,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="2.	當我參加一個社交聚會時，我傾向有更多的力氣"
+                android:text="2.	當我參加一個社交聚會時，我通常會"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q2"
@@ -77,7 +77,7 @@
                 android:layout_height="match_parent" >
 
                 <RadioButton
-                    android:text="在夜色很深時，一旦我開始投入，也許就是最晚離開的那一個"
+                    android:text="在夜色很深時，也許就是最晚離開的那一個"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a2_1"
@@ -85,7 +85,7 @@
                     android:layout_weight="1" />
 
                 <RadioButton
-                    android:text="在夜晚開始的時候，我就疲倦了並且想回家"
+                    android:text="在夜晚開始的時候，就疲倦了並且想回家"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a2_2"
@@ -95,7 +95,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="3.	下列哪一種聽起來比較吸引人"
+                android:text="3.	下列哪一種聽起來比較吸引人?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q3"
@@ -108,7 +108,7 @@
                 android:layout_height="match_parent" >
 
                 <RadioButton
-                    android:text="與我的情人道有很多人且社交活動頻繁的地方"
+                    android:text="與我的情人去社交活動頻繁的地方"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a3_1"
@@ -116,7 +116,7 @@
                     android:layout_weight="1" />
 
                 <RadioButton
-                    android:text="待在家中與我的情人做一些特別的事情，例如觀賞一部有趣的錄影帶並享用我最愛的外帶食物"
+                    android:text="待在家中與我的情人做一些特別的事情"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a3_2"
@@ -146,7 +146,7 @@
                     android:layout_weight="1" />
 
                 <RadioButton
-                    android:text="較安靜並保留，直到我覺得舒服"
+                    android:text="較安靜並保留"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a4_2"
@@ -155,7 +155,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="5.	過去，我傾向遇見我大部分情人:"
+                android:text="5.	過去，我希望我的情人"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q5"
@@ -168,7 +168,7 @@
                 android:layout_height="match_parent" >
 
                 <RadioButton
-                    android:text="在宴會中、夜總會、工作上、休閒活動上、會議上，或當朋友介紹我給他們的朋友時"
+                    android:text="在外面不要有太多親密的動作"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a5_1"
@@ -176,7 +176,7 @@
                     android:layout_weight="1" />
 
                 <RadioButton
-                    android:text="透過私人的方式，例如個人廣告、錄影約會，或是由親密的朋友和家人介紹"
+                    android:text="不受旁人眼光，盡情恩愛"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a5_2"
@@ -185,7 +185,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="6.	如果今天要報告Android專題，你會:"
+                android:text="6.	如果今天要報告Android專題，你會"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q6"
@@ -215,7 +215,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="7.	當你在教室準備期末考時，有情侶在附近放閃，你心裡會:"
+                android:text="7.	當你在教室準備期末考時，有情侶在附近放閃，你心裡會"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q7"
@@ -245,7 +245,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="8.	你是否會後悔製作這個專題:"
+                android:text="8.	你是否會後悔製作這個專題"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q8"
@@ -275,7 +275,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="9.	當我置身一段關係中時，我傾向相信:"
+                android:text="9.	當我正處於曖昧階段時"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q9"
@@ -288,7 +288,7 @@
                 android:layout_height="match_parent" >
 
                 <RadioButton
-                    android:text="永遠有進步的空間"
+                    android:text="我會主動出擊"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a9_1"
@@ -296,7 +296,7 @@
                     android:layout_weight="1" />
 
                 <RadioButton
-                    android:text="若他沒有破壞，別修補它"
+                    android:text="等待對方有進一步的行動"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/a9_2"
@@ -305,7 +305,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="10. 我把大部分和別人的相遇視為:"
+                android:text="10. 我把大部分和別人的相遇視為"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/q10"
